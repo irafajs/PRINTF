@@ -34,7 +34,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		{
 			i_line[strcspn(i_line, "\n")] = '\0';
 			execve(i_line, argv, NULL);
-			printf("No such file or directory\n");
+			printf("%s: No such file or directory\n", argv[0]);
 			free(i_line);
 			i_line = NULL;
 		}
