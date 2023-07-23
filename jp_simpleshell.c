@@ -9,7 +9,6 @@
  */
 int main(__attribute__((unused)) int argc, char *argv[])
 {
-	/*char *const *envp = NULL;*/
 	ssize_t check_er;
 	size_t storesize = 0;
 	char *i_line = NULL;
@@ -33,7 +32,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		else
 		{
 			i_line[strcspn(i_line, "\n")] = '\0';
-			execve(i_line, argv, NULL);
+			execve("/home/vagrant/simple_shell", &i_line, NULL);
 			printf("%s: No such file or directory\n", argv[0]);
 			free(i_line);
 			i_line = NULL;
