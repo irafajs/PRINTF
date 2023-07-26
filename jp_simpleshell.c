@@ -19,7 +19,7 @@ int main(__attribute__((unused)) int argc, char *argv[])
 		if (check_er == -1)
 		{
 			perror("failed to read inputted line\n");
-			break;
+			exit(0);
 		}
 		if (i_line[0] == '\n')
 		{
