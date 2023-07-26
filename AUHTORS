@@ -1,0 +1,20 @@
+decriptions
+--------------
+This repository contains a version of shell in C programming language, 
+which maintains the main functions of basic function. 
+It is totally requested by Alx-Africa School and in groupe team of two peaple done by Irafasha jules and Gitsimabnyi Prosper we are from RWANDA
+
+Requirements
+-----------------
+Anyone must have the gcc compiler plus 64-bit operating system in his/her computer.
+
+
+Options
+-----------------
+In this shell, the following conversions of operators are available:
+
+ls = lists the information about files and directories.
+
+exit = can quits the program whenever needed.
+
+env = cam prints the environment variables within it.
