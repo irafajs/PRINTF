@@ -10,5 +10,6 @@
 #include <sys/wait.h>
 
 void execute_command(char *command, char *argv[]);
+int print_env(char **env, char *argv[]);
 
 #endif
