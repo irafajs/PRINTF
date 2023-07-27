@@ -22,26 +22,26 @@ int main(__attribute__((unused)) int argc, char *argv[], char *envp[])
 			perror("failed to read inputted line\n");
 			break;
 		}
-		if (strcmp(i_line, "/bin/ls\n") == 0)
+		i_line[strcspn(i_line, "\n")] = '\0';
+		if (strcmp(i_line, "/bin/ls") == 0)
 		{
 			system("ls");
 			continue;
 		}
-		if (strcmp(i_line, "ls -l /tmp\n") == 0)
+		if (strcmp(i_line, "ls -l /tmp") == 0)
 		{
 			system("ls -l /tmp");
 			continue;
 		}
-		if (i_line[0] == '\n')
+		if (i_line[0] == '\0')
 		{
 			continue;
 		}
-		if (strcmp(i_line, "exit\n") == 0)
+		if (strcmp(i_line, "exit") == 0)
 		{
 			free(i_line);
 			exit(1);
 		}
-		i_line[strcspn(i_line, "\n")] = '\0';
 		execute_command(i_line, &argv[0]);
 		if (strcmp(i_line, "env") == 0)
 		{
