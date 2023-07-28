@@ -13,12 +13,20 @@ int main(__attribute__((unused)) int argc, char *argv[], char *envp[])
 	ssize_t check_er;
 	size_t storesize = 0;
 	char *i_line = NULL;
+	int interactive_mode = isatty(STDIN_FILENO);
 
 	do {
-		printf("shellpro~ ");
+		if (interactive_mode)
+		{
+			printf("shellpro~ ");
+		}		
 		check_er = getline(&i_line, &storesize, stdin);
 		if (check_er == -1)
 		{
+			if (!interactive_mode)
+			{
+				exit(0);
+			}
 			perror("failed to read inputted line\n");
 			break;
 		}
