@@ -48,7 +48,7 @@ int main(__attribute__((unused)) int argc, char *argv[], char *envp[])
 		if (strcmp(i_line, "exit") == 0)
 		{
 			free(i_line);
-			exit(1);
+			exit(0);
 		}
 		execute_command(i_line, &argv[0]);
 		if (strcmp(i_line, "env") == 0)
