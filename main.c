@@ -35,6 +35,7 @@ int main(int argc, char *argv[], char *envp[])
 			{
 			system("ls-l/tmp");
 			}
+			execute_command(i_line, &argv[0]);
 			free(i_line);
 			exit(0);
 		}
