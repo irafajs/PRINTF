@@ -20,7 +20,7 @@ int main(int argc, char *argv[], char *envp[])
 	{
 		while ((check_er = getline(&i_line, &storesize, stdin)) != -1)
 		{
-			/*if (check_er == -1)
+			if (check_er == -1)
 			{
 				free(i_line);
 				exit(0);
@@ -34,8 +34,7 @@ int main(int argc, char *argv[], char *envp[])
 			else if (strcmp(i_line, "ls-l/tmp") == 0)
 			{
 			system("ls-l/tmp");
-			}*/
-			execute_command(i_line, &argv[0]);
+			}
 			free(i_line);
 			exit(0);
 		}
