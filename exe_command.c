@@ -57,7 +57,7 @@ void execute_command(char *command, char *argv[])
 	}
 	else
 	{
-		printf("%s: No such file or directory\n", argv[0]);
+		printf("%s:  1: %s: No such file or directory\n", argv[0], argv[1]);
 	}
 	free(path_copy);
 }
